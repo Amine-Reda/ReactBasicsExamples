@@ -18,7 +18,7 @@ import HoverCounterTwo from "./RenderProps/HoverCounterTwo";
 import ClickCountertwo from "./RenderProps/ClickCountertwo";
 import User from "./RenderProps/User";
 import Counter from "./RenderProps/Counter";
-import ComponentC from "./Context/ComponentC";
+import ComponentC from "./Hooks/useContext/ComponentC";
 import { UserProvider } from "./Context/userContext";
 import PostList from "./HttpAxios/PostList";
 import PostForm from "./HttpAxios/PostForm";
@@ -31,6 +31,12 @@ import HookMouse from "./Hooks/useEffect/HookMouse";
 import MouseContainer from "./Hooks/useEffect/MouseContainer";
 import IntervalHookCounter from "./Hooks/useEffect/IntervalHookCounter";
 import DataFetching from "./Hooks/FetchDataUseEffect/DataFetching";
+import { ChannelContext, UserContext } from "./Hooks/useContext/createContext";
+import CounterOne from "./Hooks/useReducer/CounterOne";
+import CounterTwo from "./Hooks/useReducer/CounterTwo";
+import CounterThree from "./Hooks/useReducer/Counterthree";
+import ComponentF from "./Hooks/useContext/ComponentF";
+import Demo from "./Hooks/useReducer&useContext/Demo";
 
 function App() {
   return (
@@ -101,10 +107,21 @@ function App() {
         <IntervalHookCounter />
       */}
 
-     {/*<DataFetching />  FetchData with useEffect */} 
+      {/*<DataFetching />  FetchData with useEffect */}
 
+      {/*
+        <UserContext.Provider value={"amine"}>
+          <ChannelContext.Provider value={"reda"}>  /UseContext
+            <ComponentC />                          check componentsF that use context without Hooks(its hard)
+          </ChannelContext.Provider>                check the compoenetE that use Hook
+        </UserContext.Provider>
+      */}
 
-     
+      {/*<CounterOne />  useReducer for state as number
+       <CounterTwo /> useReducer for state as object     useReducer for managment local state
+      <CounterThree /> use multiple reducer */}
+
+     {/* <Demo />   useReducer&useContext */}
     </div>
   );
 }
