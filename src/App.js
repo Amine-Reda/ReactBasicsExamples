@@ -29,6 +29,8 @@ import HookCounterFour from "./Hooks/useState/HookCounterFour";
 import HookCounteOne from "./Hooks/useEffect/HookCounteOne";
 import HookMouse from "./Hooks/useEffect/HookMouse";
 import MouseContainer from "./Hooks/useEffect/MouseContainer";
+import IntervalHookCounter from "./Hooks/useEffect/IntervalHookCounter";
+import DataFetching from "./Hooks/FetchDataUseEffect/DataFetching";
 
 function App() {
   return (
@@ -94,9 +96,15 @@ function App() {
       */}
 
       {/*<HookCounteOne /> 
-       <HookMouse />
+       <HookMouse />               /UseEffect
+        <MouseContainer />
+        <IntervalHookCounter />
       */}
-      <MouseContainer />
+
+     {/*<DataFetching />  FetchData with useEffect */} 
+
+
+     
     </div>
   );
 }
