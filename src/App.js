@@ -43,6 +43,14 @@ import ParentComponent from "./Hooks/useCallback/ParentComponent";
 import CounterM from "./Hooks/useMemo/CounterM";
 import MemoComponent from "./Memo/MemoComponent";
 import Parent from "./Memo/Parent";
+import FocusInputHook from "./Hooks/useRef/FocusInputHook";
+import HookTimer from "./Hooks/useRef/HookTimer";
+import DocTitleOne from "./Hooks/customHook/DocTitleOne";
+import DocTitleTwo from "./Hooks/customHook/DocTitleTwo";
+import CounterOn from "./Hooks/customHook/CounterOn";
+import CounterTw from "./Hooks/customHook/CounterTw";
+import UserForm from "./Hooks/customHook/hook/UserForm";
+
 function App() {
   return (
     <div className="App">
@@ -176,8 +184,17 @@ function App() {
       
       */}
 
+      {/*<FocusInputHook />      useRef :version 1 access to dom node in the same classe       
+      <HookTimer />              useRef :version 2  */}
 
+      {/* <DocTitleOne />        customhook example useDocumentTitle()
+          <DocTitleTwo />                      
       
+          <CounterOn />          customhook example use Counter()
+          <CounterTw />   
+      
+      */}
+      <UserForm />
     </div>
   );
 }
