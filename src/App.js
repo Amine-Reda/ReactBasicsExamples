@@ -1,5 +1,5 @@
 import "./App.css";
-import ParentComponent from "./MethodeAsProps/ParentComponent";
+
 import Binding from "./Binding/Binding";
 import MLifeCycleA from "./MountingLifeCycle/MLifeCycleA";
 import ULifeCycleA from "./UpdatingLifeCycle/ULifeCycleA";
@@ -39,6 +39,7 @@ import ComponentF from "./Hooks/useContext/ComponentF";
 import Demo from "./Hooks/useReducer&useContext/Demo";
 import DataFetchingOne from "./Hooks/FetchDataUseReducer/DataFetchingOne";
 import DataFetchingTwo from "./Hooks/FetchDataUseReducer/DataFetchingTwo";
+import ParentComponent from "./Hooks/useCallback/ParentComponent";
 
 function App() {
   return (
@@ -151,7 +152,23 @@ function App() {
                         but useState you will pass all parametre the you want update
            */}
 
-           
+       {/*/<ParentComponent />  useCallback
+                        the problem that when we increment age or salary compoenet all others
+                         components rendering ,we add the useMomo for not rendering but we have a problem is that 
+                         when we click for age also the salary rendering beacaus the function of salary also recreated
+                         so also rendering the solution is useCallback  
+                         
+                         but useCallback still not good because useCallback version is doing more work. Not only do we have to define
+                         the function, but we also have to define an array ([]) and call the React.useCallback  the original  function
+                          gets garbage collected (freeing up memory space) and then a new one is created. However with useCallback the original
+                           function wont get garbage collected and a new one is created, so you're worse-off from a memory perspective as well.
+       */}
+
+
+       
+
+
+
     </div>
   );
 }
