@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
+import useInput from "./useInput";
 
 function UserForm() {
-  const [firstName, setFirstName] = useState("");
-  const [LastName, setLastName] = useState("");
+  const [firstName, bindFirstName, resetFirstName] = useInput("");
+  const [lastName, bindLastName, resetLastName] = useInput("");
 
   const submitHandler = (e) => {
     e.preventDefault();
-    alert(`Hello ${firstName} ${LastName}`);
+    alert(`Hello ${firstName} ${lastName}`);
+    resetFirstName();
+    resetLastName();
   };
 
   return (
@@ -14,19 +17,11 @@ function UserForm() {
       <form onSubmit={submitHandler}>
         <div>
           <label>First name</label>
-          <input
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            type="text"
-          />
+          <input {...bindFirstName} type="text" />
         </div>
         <div>
           <label>Last name</label>
-          <input
-            value={LastName}
-            onChange={(e) => setLastName(e.target.value)}
-            type="text"
-          />
+          <input {...bindLastName} type="text" />
         </div>
         <button type="submit">Click</button>
       </form>
