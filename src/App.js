@@ -37,6 +37,8 @@ import CounterTwo from "./Hooks/useReducer/CounterTwo";
 import CounterThree from "./Hooks/useReducer/Counterthree";
 import ComponentF from "./Hooks/useContext/ComponentF";
 import Demo from "./Hooks/useReducer&useContext/Demo";
+import DataFetchingOne from "./Hooks/FetchDataUseReducer/DataFetchingOne";
+import DataFetchingTwo from "./Hooks/FetchDataUseReducer/DataFetchingTwo";
 
 function App() {
   return (
@@ -121,7 +123,35 @@ function App() {
        <CounterTwo /> useReducer for state as object     useReducer for managment local state
       <CounterThree /> use multiple reducer */}
 
-     {/* <Demo />   useReducer&useContext */}
+      {/* <Demo />   useReducer&useContext to manage global state */}
+
+      {/*  <DataFetchingOne /> fetch with  useState 
+           <DataFetchingTwo /> fetch with useReducer   
+           
+           useState vs useReducer:
+     type of state:   
+                       Number,String,Boolean => useState is better  
+                       Object Or Array => useReducer is better
+                       
+     Number of transaction(updating state):
+                       One  or two => useState is better
+                       Too many => useRducer  because you will use a lots of setState()  
+
+     Related state transactions:
+                       no relation bettwen states=>useState is better
+                       yes -----------=> useReducer is better the code will be clear
+
+      Businness logic :
+                       no business logic (no business log between old value and new value ) => useState is better
+                       ------------------(yes-------------------------------------------)    => useReducer is better
+      Local vs Global:
+                        local=>useState 
+                        global=>useReducer    
+                        beacaus fro global state useReducer you will pass just dipatch methode to update all states
+                        but useState you will pass all parametre the you want update
+           */}
+
+           
     </div>
   );
 }
