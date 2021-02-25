@@ -40,7 +40,9 @@ import Demo from "./Hooks/useReducer&useContext/Demo";
 import DataFetchingOne from "./Hooks/FetchDataUseReducer/DataFetchingOne";
 import DataFetchingTwo from "./Hooks/FetchDataUseReducer/DataFetchingTwo";
 import ParentComponent from "./Hooks/useCallback/ParentComponent";
-
+import CounterM from "./Hooks/useMemo/CounterM";
+import MemoComponent from "./Memo/MemoComponent";
+import Parent from "./Memo/Parent";
 function App() {
   return (
     <div className="App">
@@ -55,6 +57,8 @@ function App() {
       {/* <Fragment /> fragment exmple <Table />*/}
 
       {/*<ParentComp /> PureComponent just for class components*/}
+
+      {/*<Parent name="amine" />  Memo like PureComponent but for function Component  */}
 
       {/* <RefsDemo /> for normal html element */}
 
@@ -152,7 +156,7 @@ function App() {
                         but useState you will pass all parametre the you want update
            */}
 
-       {/*/<ParentComponent />  useCallback
+      {/*/<ParentComponent />  useCallback    //Performance Optimisation
                         the problem that when we increment age or salary compoenet all others
                          components rendering ,we add the useMomo for not rendering but we have a problem is that 
                          when we click for age also the salary rendering beacaus the function of salary also recreated
@@ -164,11 +168,16 @@ function App() {
                            function wont get garbage collected and a new one is created, so you're worse-off from a memory perspective as well.
        */}
 
+      {/*<CounterM />         useMemo     
+      
+      the deference between useMemo and useCallback
+      useCallback:he cash the provided function it self
+      useMemo:ivoke the funtion and he cash the result
+      
+      */}
 
-       
 
-
-
+      
     </div>
   );
 }
